@@ -1,0 +1,17 @@
+High level implementation plan
+User Profiles
+CMS user
+VA user
+Admin
+
+Functional Requirements
+Create the API for consumption at VA to import beneficiary details into CMS
+Create the API for consumption at CMS to view the demographics and coverage information of beneficiaries to identify dual beneficiaries.
+
+Technical requirements/constraints from the prospective product owner
+Use FHIR Bulk data IGs
+The data formats provided should be maintained as much as possible.
+Should deploy into AWS US-east environment
+
+Key Technical Decision at the Beginning of the project
+1. Use Hapi FHIR starter kit - Team mettle has been using this for several of its projects and also in its product offerings. It provides a comprehensive environment with good 
