@@ -31,6 +31,21 @@
 3. AWS cognito is being used as authentication and authorization service.
 4. A mysql service from AWS RDS is being used for database management. 
 5. As per the requirements there will be 4 endpoints. We have left the other FHIR endpoints also available for future expansion. Due to time constraints we did not block them temporarily. 
-  * An endpoint to import Coverage and Patient data from VA
-  * An endpoint to
+  * An endpoint to import Coverage and Patient data from VA asynchronously ($import operation)
+  * An endpoint to check the status of the asynchronous data import ($import-poll-status operation)
+  * An endpoint to synchronously get the Coverages based on patient (standard FHIR search on Patient Resource)
+  * An endpoint to synchronously check the demographics of a patient (standard FHIR search on Coverage Resource)
+6. Used agiled development model where a working server was created on day 1 of the implementation and gradual increments were made from then on so that continous feedback can be taken from both technical and non technical stakeholders.
+
+Lessons learned
+1. Several tasks were done in parallel which resuulted in longer feature deliveries. Could have reduced then number of parallel developments.
+2. Team composition had dedicated personnel for cloud and infrastructure. For short spanned projects, we could have ustilized genaralists.
+3. Could have used predefined teamplates for devops processes.
+4. using GIT for documentation was little difficult for many personnel which resulted in schedule delays and too many last minute documentation changes.
+
+What worked
+1. Our experience with FHIR profiles and knowledge of various IGs.
+2. Experience in setting up systems quickly.
+3. availability of strong agile project management tools in house.
+4. Human centric design based on our experience working with healthcare data.
 
